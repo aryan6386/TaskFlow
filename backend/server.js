@@ -20,10 +20,8 @@ const authLimiter = rateLimit({
 
 // Middleware
 app.use(cors({
-  origin: (origin, callback) => {
-    const allowed = (process.env.FRONTEND_URL || 'http://localhost:3000').split(',').map(s => s.trim());
-    if (!origin || allowed.includes(origin)) return callback(null, true);
-    callback(new Error('Not allowed by CORS'));
+  origin: function (origin, callback) {
+    callback(null, true); // Allow all origins dynamically (reflects origin back)
   },
   credentials: true,
 }));
