@@ -9,12 +9,12 @@ const links = [
   { href: '/tasks',     icon: '✅', label: 'My Tasks' },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ className = '' }) {
   const pathname = usePathname();
   const { user, logout } = useAuth();
 
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${className}`}>
       <div className="sidebar-logo">
         <div className="sidebar-logo-icon">⚡</div>
         <div className="sidebar-logo-text">Task<span>Flow</span></div>
