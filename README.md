@@ -66,9 +66,4 @@ Open [http://localhost:3000](http://localhost:3000) to view the application.
 | Add / remove team members | ✅ | ❌ |
 | Update task status | ✅ | ✅ (own tasks) |
 | View dashboard & assigned projects | ✅ | ✅ |
-
----
-
-## 📄 License
-
-MIT
+___
